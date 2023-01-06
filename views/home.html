@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MercadoLiebre</title>
-    <link rel = "stylesheet" href = "../public/css/styles.css">
+    <link rel = "stylesheet" href = "/css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />                   
 </head>
@@ -14,47 +14,58 @@
 
     <header>
 
-        <div id = "logo"><img src = "../public/images/logo-mercado-liebre.svg" width = "150"></img></div>
+        <div class = "logo_barra_mensaje">
 
-        <div>
-            <input class="input" type="text" placeholder="Buscar productos, marcas">
-            <button type="submit"> 
-                <i class="fa-solid fa-magnifying-glass"></i> 
-            </button>
+            <div class = "logo_barra">
+
+                <div id = "logo">
+                    <img src = "/images/logo-mercado-liebre.svg" width = "150"></img>
+                </div>
+
+                <div id = "barra">
+                    <input class="input" type="text" placeholder="Buscar productos, marcas">
+                    <button type="submit"> 
+                        <i class="fa-solid fa-magnifying-glass"></i> 
+                    </button>
+                </div>
+            </div>
+
+                <div id = "message">
+                    <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito
+                </div>
         </div>
 
-        <div id = "message">
-            <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito
+        <div class = "listas">
+            <ul>
+                <li><a href = "">Ofertas</a></li>
+                <li><a href = "">Tiendas Oficiales</a></li>
+                <li><a href = "">Vender</a></li>
+                <li><a href = "">Ayuda</a></li>
+            </ul>
+
+            <ul>
+                <li><a href = "/register">Creá tu cuenta</a><i class="fas fa-solid fa-id-card"></i></li>
+                <li><a href = "/login">Ingresá</a><i class='fa-solid fa-right-to-bracket'></i></li>
+                <li><a href = "">Mis compras</a><i class="fas fa-solid fa-basket-shopping"></i></li>
+            </ul>
         </div>
-
-        <ul>
-            <li><a href = "">Ofertas</a></li>
-            <li><a href = "">Tiendas Oficiales</a></li>
-            <li><a href = "">Vender</a></li>
-            <li><a href = "">Ayuda</a></li>
-        </ul>
-
-        <ul>
-            <li><a href = "">Creá tu cuenta</a><i class="fas fa-solid fa-id-card"></i></li>
-            <li><a href = "">Ingresá</a><i class='fa-solid fa-right-to-bracket'></i></li>
-            <li><a href = "">Mis compras</a><i class="fas fa-solid fa-basket-shopping"></i></li>
-        </ul>
 
         <div class="burger-menu">
             <i class="fas fa-bars fa-2xl" 
             style = "   
             color : #ffffff;
             background-color: #1259c3;
-            padding-top : 15px;
-            padding-bottom : 15px;
-            padding-left: 5px;
-            padding-right: 5px;
-            border-radius: 4px;"
+            padding-top : 20px;
+            padding-bottom : 20px;
+            padding-left: 8px;
+            padding-right: 8px;
+            border-radius: 4px;
+            margin: 10px;"
         ></i>    
         </div>
 
         <div class = "banner_container">
-            <img src = "../public/images/img-home-banner.jpg" id = "banner"></img>        
+            <img src = "/images/img-home-banner.jpg" id = "banner"></img>        
         </div>
 
     </header>
@@ -65,123 +76,146 @@
 
             <h2>Basado en tu última visita</h2>
 
-            <article  class = "item">
-                <div class = "im_container">
-                    <img src = "../public/images/img-cafetera-moulinex.jpg" class = "prod_im"></img> 
-                </div>
-                <div class = "products">
-                    <div id = "truck">
-                        <i id = "truck" class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+            <section class = "sec">
+                
+                <article  class = "item">
+                    <div class = "im_container">
+                        <img src = "/images/img-cafetera-moulinex.jpg" class = "prod_im"></img> 
                     </div>
-                    <div class = "price">$6.770</div>
-                    <div class = "product_disc">40% off</div>
-                    <h4 class = "product">Cafetera Moulinex</h4>
-                </div>
-            </article>
-            
-            <article class = "item">
-                <div class = "im_container">
-                    <img src = "../public/images/img-macbook-pro-2019.jpg" class = "prod_im"></img> 
-                </div>
-                <div class = "products">
-                    <div id = "truck">
-                        <i id = "truck" class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                    <div class = "products">
+                        <div id = "truck">
+                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                        </div>
+                        <div class = "price_discount">
+                            <div class = "price">$6.770</div>
+                            <div class = "product_disc">40% off</div>
+                        </div>
+                        <h4 class = "product">Cafetera Moulinex</h4>
                     </div>
-                    <div class = "price">$230.000</div>
-                    <div class = "product_disc">20% off</div>
-                    <h4 class = "product">MacBook Pro 2019</h4>
-                </div>
-            </article>
+                </article>
+                
+                <article class = "item">
+                    <div class = "im_container">
+                        <img src = "/images/img-macbook-pro-2019.jpg" class = "prod_im"></img> 
+                    </div>
+                    <div class = "products">
+                        <div id = "truck">
+                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                        </div>
+                        <div class = "price_discount">
+                            <div class = "price">$230.000</div>
+                            <div class = "product_disc">20% off</div>
+                        </div>
+                        <h4 class = "product">MacBook Pro 2019</h4>
+                    </div>
+                </article>
 
-            <article class = "item">
-                <div class = "im_container">
-                    <img src = "../public/images/img-samsung-galaxy-s10.jpg" class = "prod_im"></img> 
-                </div>
-                <div class = "products">
-                    <div id = "truck">
-                        <i id = "truck" class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                <article class = "item">
+                    <div class = "im_container">
+                        <img src = "/images/img-samsung-galaxy-s10.jpg" class = "prod_im"></img> 
                     </div>
-                    <div class = "price">$70.500</div>
-                    <div class = "product_disc">10% off</div>
-                    <h4 class = "product">Samsung Galaxy S10</h4>
-                </div>
-            </article>
-               
-            <article class = "item">
-                <div class = "im_container">
-                    <img src = "../public/images/img-tv-samsung-smart.jpg" class = "prod_im"></img> 
-                </div>
-                <div class = "products">
-                    <div id = "truck">
-                        <i  id = "truck" class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                    <div class = "products">
+                        <div id = "truck">
+                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 5px;"></i>
+                        </div>
+                        <div class = "price_discount">
+                            <div class = "price">$70.500</div>
+                            <div class = "product_disc">10% off</div>
+                        </div>
+                        <h4 class = "product">Samsung Galaxy S10</h4>
                     </div>
-                    <div class = "price">$23.200</div>
-                    <div class = "product_disc">5% off</div>
-                    <h4 class = "product">SmartTv Samsung 43"</h4>
-                </div> 
-            </article>
+                </article>
+                
+                <article class = "item">
+                    <div class = "im_container">
+                        <img src = "/images/img-tv-samsung-smart.jpg" class = "prod_im"></img> 
+                    </div>
+                    <div class = "products">
+                        <div id = "truck">
+                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                        </div>
+                        <div class = "price_discount">
+                            <div class = "price">$23.200</div>
+                            <div class = "product_disc">5% off</div>
+                        </div>
+                        <h4 class = "product">SmartTv Samsung 43"</h4>
+                    </div> 
+                </article>
+            </section>
         </section>
+
 
         <section>
 
             <h2>Ofertas</h2>
 
-            <article class = "item">
-                <div class = "im_container">
-                    <img src = "../public/images/img-cafetera-moulinex.jpg" class = "prod_im"></img> 
-                </div>
-                <div class = "products">
-                    <div id = "truck">
-                        <i  id = "truck" class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
-                    </div>
-                    <div class = "price">$6.770</div>
-                    <div class = "product_disc">40% off</div>
-                    <h4 class = "product">Cafetera Moulinex</h4>
-                </div>
+            <section class = "sec">
 
-            </article>
-            
-            <article class = "item">
-                <div class = "im_container">
-                    <img src = "../public/images/img-macbook-pro-2019.jpg" class = "prod_im"></img> 
-                </div>
-                <div class = "products">
-                    <div id = "truck">
-                        <i  id = "truck" class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                <article class = "item">
+                    <div class = "im_container">
+                        <img src = "/images/img-cafetera-moulinex.jpg" class = "prod_im"></img> 
                     </div>
-                    <div class = "price">$230.000</div>
-                    <div class = "product_disc">20% off</div>
-                    <h4 class = "product">MacBook Pro 2019</h4>
-                </div>
-            </article>
+                    <div class = "products">
+                        <div id = "truck">
+                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                        </div>
+                        <div class = "price_discount">
+                            <div class = "price">$6.770</div>
+                            <div class = "product_disc">40% off</div>
+                        </div>
+                        <h4 class = "product">Cafetera Moulinex</h4>
+                    </div>
 
-            <article class = "item">
-                <div class = "im_container">
-                    <img src = "../public/images/img-samsung-galaxy-s10.jpg" class = "prod_im"></img> 
-                </div>
-                <div class = "products">
-                    <div id = "truck">
-                        <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                </article>
+                
+                <article class = "item">
+                    <div class = "im_container">
+                        <img src = "/images/img-macbook-pro-2019.jpg" class = "prod_im"></img> 
                     </div>
-                    <div class = "price">$70.500</div>
-                    <div class = "product_disc">10% off</div>
-                    <h4 class = "product">Samsung Galaxy S10</h4>
-                </div>
-            </article>
-               
-            <article class = "item">
-                <div class = "im_container">
-                    <img src = "../public/images/img-tv-samsung-smart.jpg" class = "prod_im"></img> 
-                </div>
-                <div class = "products">
-                    <div id = "truck">
-                        <i  id = "truck" class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                    <div class = "products">
+                        <div id = "truck">
+                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                        </div>
+                        <div class = "price_discount">
+                            <div class = "price">$230.000</div>
+                            <div class = "product_disc">20% off</div>
+                        </div>
+                        <h4 class = "product">MacBook Pro 2019</h4>
                     </div>
-                    <div class = "price">$23.200</div>
-                    <div class = "product_disc">5% off</div>
-                    <h4 class = "product">SmartTv Samsung 43"</h4>
-                </div> 
-            </article>
+                </article>
+
+                <article class = "item">
+                    <div class = "im_container">
+                        <img src = "/images/img-samsung-galaxy-s10.jpg" class = "prod_im"></img> 
+                    </div>
+                    <div class = "products">
+                        <div id = "truck">
+                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                        </div>
+                        <div class = "price_discount">
+                            <div class = "price">$70.500</div>
+                            <div class = "product_disc">10% off</div>
+                        </div>
+                        <h4 class = "product">Samsung Galaxy S10</h4>
+                    </div>
+                </article>
+                
+                <article class = "item">
+                    <div class = "im_container">
+                        <img src = "/images/img-tv-samsung-smart.jpg" class = "prod_im"></img> 
+                    </div>
+                    <div class = "products">
+                        <div id = "truck">
+                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                        </div>
+                        <div class = "price_discount">
+                            <div class = "price">$23.200</div>
+                            <div class = "product_disc">5% off</div>
+                        </div>
+                        <h4 class = "product">SmartTv Samsung 43"</h4>
+                    </div> 
+                </article>
+            </section>
         </section>
     </main>
 

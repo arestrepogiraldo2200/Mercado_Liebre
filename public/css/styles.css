@@ -1,5 +1,7 @@
 
 *{
+    margin: 0px;
+    padding: 0px;   
     box-sizing: border-box; 
 }
 
@@ -51,6 +53,11 @@ ul{
     padding-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+    display: none;
+}
+
+ul li{
+    padding-right: 20px;
 }
 
 a{
@@ -106,7 +113,11 @@ button{
 #logo{
     text-align: left;
     padding-left: 10px;
+    padding-bottom: 10px;
+    flex-grow: 50%;
 }
+
+
 
 #message{
     text-align: center;
@@ -159,6 +170,7 @@ main{
 .price {
     font-size: 18px;
     text-align: left;
+    flex-grow: 0.3;
 }
 
 .product{
@@ -166,33 +178,125 @@ main{
     text-align: left;
     color : #666;
     font-weight : 200; 
-
+    display: none;
 }
 
 .product_disc{
     font-size: 16px;
     text-align: left;
-    color : #39b54a;;
+    color : #39b54a;
+    flex-grow: 0.7;
 }
 
+
 #truck{
-    text-align: left;
+    text-align: right;
+    display: block;
+    font-size: 16px;
     color : #39b54a;  
     background-color: white;
+    right: 20px;
+    top: -15px;
 }
 
 main section article{
     margin: 10px;
 }
 
+
+
 @media (min-width: 361px) {
     
     .im_container, .products{
         box-shadow : 0px 0px 10px rgb(100, 100, 100);
     }
+    .product{
+        display:block;
+    }
+    .burger-menu{
+        display: none;
+    }
+
+    .listas{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo_barra_mensaje{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo_barra{
+        flex-grow: 66%;
+    }
+
+    #message{
+        flex-grow: 34%;
+        align-self: center;
+    }
+
+    .sec{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .sec > * {
+        flex: 40%
+    }
+
+ 
 }
 
 
-@media(min-width: 769px){
+@media (min-width: 769px) {
 
+    .sec{
+        display : flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
 }
+
+.price_discount{
+    display: flex;
+}
+
+.logo_barra{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#barra{
+    flex-grow: 50%;
+    align-self: center;
+}
+
+.registro{
+    display: flex;
+    flex-direction: column;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
