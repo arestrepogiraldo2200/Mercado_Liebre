@@ -11,6 +11,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />                   
 </head>
+
 <body>
 
     <header>
@@ -74,26 +75,26 @@
         <form class = "registro" action="/register" method="post">
 
             <label for="name"></label>
-            <input type="text" name="name" id="name" placeholder="Nombre y apellido">
+            <input type="text" name="name" id="name" placeholder="Nombre y apellido" required minlength="2">
 
             <label for="user"></label>
-            <input type="text" name="user" id="user" placeholder="Nombre de usuari@">
+            <input type="text" name="user" id="user" placeholder="Nombre de usuari@" required minlength="2">
 
             <label for="nacimiento"></label>
             <div id = "title_forms">
                 <h4 id = "form_name">Fecha de nacimiento</h4>
             </div>
-            <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de nacimiento">
+            <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de nacimiento" required>
 
             <label for="domicilio"></label>
-            <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+            <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio" required>
 
             <label for="perfil"></label>
             <div id = "title_forms">
                 <h4 id = "form_name">Perfil del usuario</h4>
             </div>
             <div class = "radio">
-                <input type="radio" name="perfil" id="perfil">Comprador
+                <input type="radio" name="perfil" id="perfil" required>Comprador
                 <input type="radio" name="perfil" id="perfil">Vendedor
             </div>
 
@@ -121,20 +122,17 @@
             <div id = "title_forms">
                 <h4 id = "form_name">Foto</h4>
             </div>
-            <input type="file" for = "foto" id = "foto" placeholder = "Foto">
+            <input type="file" for = "foto" id = "foto" placeholder = "Foto" accept=".jpg, .png" required>
 
             <label for="contraseña"></label>
-            <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+            <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña" required>
 
             <label for="repetircontraseña"></label>
-            <input type="password" name="repetircontraseña" id="repetircontraseña" placeholder="Repetir contraseña">
+            <input type="password" name="repetircontraseña" id="repetircontraseña" placeholder="Repetir contraseña" required>
 
-            <button class = "enviar">Enviar
-                <a href="/"></a>
-            </button>
+            <button class = "enviar" type="submit">Enviar</button>
 
-            <button class = "borrar">Borrar datos del formulario
-            </button>
+            <input type="reset" class = "borrar" value = "Borrar datos del formulario"></input>
 
         </form>
 

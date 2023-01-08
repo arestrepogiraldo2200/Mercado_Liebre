@@ -11,6 +11,8 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />                   
 </head>
+
+
 <body>
 
     <header>
@@ -73,20 +75,17 @@
         <form class = "login" action="/login" method = "post">
 
             <label for="user"></label>
-            <input type="text" name = "user" id = "user" placeholder="Nombre de usuari@">
+            <input type="text" name = "user" id = "user" placeholder="Nombre de usuari@" required minlength="2">
 
             <label for="contraseña"></label>
-            <input type="password" name = "contraseña" id = "contraseña" placeholder="Contraseña">
+            <input type="password" name = "contraseña" id = "contraseña" placeholder="Contraseña" required minlength="2">
 
-            <button class = "enviar">Enviar
-                <a href="/"></a>
-            </button>
+            <button class = "enviar">Enviar</button>
 
         </form>
     </main>
 
     
-
     <footer>
         <div class = "flex_component">
             <div class = "icon"><i class="fas fa-solid fa-credit-card fa-2xl"></i></div>
