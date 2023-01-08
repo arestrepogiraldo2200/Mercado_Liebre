@@ -16,24 +16,21 @@
     <header>
 
         <div class = "logo_barra_mensaje">
-
-            <div class = "logo_barra">
-
-                <div id = "logo">
-                    <img src = "/images/logo-mercado-liebre.svg" width = "150"></img>
-                </div>
-
-                <div id = "barra">
-                    <input class="input" type="text" placeholder="Buscar productos, marcas">
-                    <button type="submit"> 
-                        <i class="fa-solid fa-magnifying-glass"></i> 
-                    </button>
-                </div>
+            
+            <div id = "logo">
+                <img src = "/images/logo-mercado-liebre.svg" width = "150"></img>
             </div>
 
-                <div id = "message">
-                    <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito
-                </div>
+            <div id = "barra">
+                <form action="#" class="search_form" method ="post">
+                    <input class="input" type="text" placeholder="Buscar productos, marcas">
+                </form>                   
+                <i class="fa-solid fa-magnifying-glass" id="lupa"></i> 
+            </div>
+
+            <div id = "message">
+                <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito
+            </div>
         </div>
 
         <div class = "listas">
@@ -83,23 +80,47 @@
             <input type="text" name="user" id="user" placeholder="Nombre de usuari@">
 
             <label for="nacimiento"></label>
+            <div id = "title_forms">
+                <h4 id = "form_name">Fecha de nacimiento</h4>
+            </div>
             <input type="date" name="nacimiento" id="nacimiento" placeholder="Fecha de nacimiento">
 
             <label for="domicilio"></label>
             <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
 
             <label for="perfil"></label>
-            <input type="radio" name="perfil" id="perfil">Comprador
-            <input type="radio" name="perfil" id="perfil">Vendedor
+            <div id = "title_forms">
+                <h4 id = "form_name">Perfil del usuario</h4>
+            </div>
+            <div class = "radio">
+                <input type="radio" name="perfil" id="perfil">Comprador
+                <input type="radio" name="perfil" id="perfil">Vendedor
+            </div>
 
             <label for="intereses"></label>
-            <input type="checkbox" name = "intereses" value = "Electro">
-            <input type="checkbox" name = "intereses" value = "Moda">
-            <input type="checkbox" name = "intereses" value = "Hogar">
-            <input type="checkbox" name = "intereses" value = "Juguetería">
-            <input type="checkbox" name = "intereses" value = "Vida sana">
+            <div id = "title_forms">
+                <h4 id = "form_name">Intereses</h4>
+            </div>
+            <div class = "check">
+                <input type="checkbox" name = "intereses" id = "intereses" value = "Electro">Electro
+            </div>
+            <div class = "check">
+                <input type="checkbox" name = "intereses" id = "intereses" value = "Moda">Moda
+            </div>
+            <div class = "check">
+                <input type="checkbox" name = "intereses" id = "intereses" value = "Hogar">Hogar
+            </div>
+            <div class = "check">
+                <input type="checkbox" name = "intereses" id = "intereses" value = "Juguetería">Juguetería
+            </div>
+            <div class = "check">
+                <input type="checkbox" name = "intereses" id = "intereses" value = "Vida sana">Vida sana
+            </div>
 
             <label for="foto"></label>
+            <div id = "title_forms">
+                <h4 id = "form_name">Foto</h4>
+            </div>
             <input type="file" for = "foto" id = "foto" placeholder = "Foto">
 
             <label for="contraseña"></label>
@@ -108,11 +129,11 @@
             <label for="repetircontraseña"></label>
             <input type="password" name="repetircontraseña" id="repetircontraseña" placeholder="Repetir contraseña">
 
-            <button>Enviar
+            <button class = "enviar">Enviar
                 <a href="/"></a>
             </button>
 
-            <button>Borrar datos del formulario
+            <button class = "borrar">Borrar datos del formulario
             </button>
 
         </form>
@@ -123,21 +144,26 @@
 
 
     <footer>
+        <div class = "flex_component">
+            <div class = "icon"><i class="fas fa-solid fa-credit-card fa-2xl"></i></div>
+            <h4 class ="footer_title">Pagá con tarjeta o en efectivo</h4> 
+            <p class = "texto">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+            puntos de pago. ¡Y siempre es seguro!</p>
+        </div>
 
-        <div><i class="fas fa-solid fa-credit-card fa-2xl"></i></div>
-        <h4 class ="footer_title">Pagá con tarjeta o en efectivo</h4> 
-        <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
-        puntos de pago. ¡Y siempre es seguro!</p>
+        <div class = "flex_component">
+            <div class = "icon"><i class="fas fa-solid fa-gift fa-2xl"></i></div>
+            <h4 class ="footer_title">Envío gratis desde $ 2.500</h4> 
+            <p class = "texto">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+            productos. Es un beneficio de Mercado Puntos.</p>
+        </div>
 
-        <div><i class="fas fa-solid fa-gift fa-2xl"></i></div>
-        <h4 class ="footer_title">Envío gratis desde $ 2.500</h4> 
-        <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
-        productos. Es un beneficio de Mercado Puntos.</p>
-
-        <div><i class="fas fa-solid fa-user-shield fa-2xl"></i></div>
-        <h4 class ="footer_title">Seguridad de principio a fin</h4> 
-        <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
-        porque estás siempre protegid@.</p>
+        <div class = "flex_component">
+            <div class = "icon"><i class="fas fa-solid fa-user-shield fa-2xl"></i></div>
+            <h4 class ="footer_title">Seguridad de principio a fin</h4> 
+            <p class = "texto">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+            porque estás siempre protegid@.</p>
+        </div>
 
         <div id = "copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</div>
 

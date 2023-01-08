@@ -15,24 +15,22 @@
     <header>
 
         <div class = "logo_barra_mensaje">
-
-            <div class = "logo_barra">
-
-                <div id = "logo">
-                    <img src = "/images/logo-mercado-liebre.svg" width = "150"></img>
-                </div>
-
-                <div id = "barra">
-                    <input class="input" type="text" placeholder="Buscar productos, marcas">
-                    <button type="submit"> 
-                        <i class="fa-solid fa-magnifying-glass"></i> 
-                    </button>
-                </div>
+            
+            <div id = "logo">
+                <img src = "/images/logo-mercado-liebre.svg" width = "150"></img>
             </div>
 
-                <div id = "message">
-                    <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito
-                </div>
+
+            <div id = "barra">
+                <form action="#" class="search_form" method ="post">
+                    <input class="input" type="text" placeholder="Buscar productos, marcas">
+                </form>                   
+                <i class="fa-solid fa-magnifying-glass" id="lupa"></i> 
+            </div>
+
+            <div id = "message">
+                <i class="fas fa-hand-holding-usd"></i> Comprá en cuotas y sin tarjeta de crédito
+            </div>
         </div>
 
         <div class = "listas">
@@ -84,7 +82,7 @@
                     </div>
                     <div class = "products">
                         <div id = "truck">
-                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                            <i class="fa-solid fa-truck" id = "camion" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
                         </div>
                         <div class = "price_discount">
                             <div class = "price">$6.770</div>
@@ -100,7 +98,7 @@
                     </div>
                     <div class = "products">
                         <div id = "truck">
-                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                            <i class="fa-solid fa-truck" id = "camion" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
                         </div>
                         <div class = "price_discount">
                             <div class = "price">$230.000</div>
@@ -116,7 +114,7 @@
                     </div>
                     <div class = "products">
                         <div id = "truck">
-                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 5px;"></i>
+                            <i class="fa-solid fa-truck" id = "camion" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 5px;"></i>
                         </div>
                         <div class = "price_discount">
                             <div class = "price">$70.500</div>
@@ -132,7 +130,7 @@
                     </div>
                     <div class = "products">
                         <div id = "truck">
-                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                            <i class="fa-solid fa-truck" id = "camion" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
                         </div>
                         <div class = "price_discount">
                             <div class = "price">$23.200</div>
@@ -157,7 +155,7 @@
                     </div>
                     <div class = "products">
                         <div id = "truck">
-                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                            <i class="fa-solid fa-truck" id = "camion" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
                         </div>
                         <div class = "price_discount">
                             <div class = "price">$6.770</div>
@@ -174,7 +172,7 @@
                     </div>
                     <div class = "products">
                         <div id = "truck">
-                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                            <i class="fa-solid fa-truck" id = "camion" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
                         </div>
                         <div class = "price_discount">
                             <div class = "price">$230.000</div>
@@ -190,7 +188,7 @@
                     </div>
                     <div class = "products">
                         <div id = "truck">
-                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                            <i class="fa-solid fa-truck" id = "camion" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
                         </div>
                         <div class = "price_discount">
                             <div class = "price">$70.500</div>
@@ -206,7 +204,7 @@
                     </div>
                     <div class = "products">
                         <div id = "truck">
-                            <i class="fa-solid fa-truck" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
+                            <i class="fa-solid fa-truck" id = "camion" style = "border-radius: 50%; border: 1px solid #39b54a; padding: 4px;"></i>
                         </div>
                         <div class = "price_discount">
                             <div class = "price">$23.200</div>
@@ -220,21 +218,26 @@
     </main>
 
     <footer>
+        <div class = "flex_component">
+            <div class = "icon"><i class="fas fa-solid fa-credit-card fa-2xl"></i></div>
+            <h4 class ="footer_title">Pagá con tarjeta o en efectivo</h4> 
+            <p class = "texto">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
+            puntos de pago. ¡Y siempre es seguro!</p>
+        </div>
 
-        <div><i class="fas fa-solid fa-credit-card fa-2xl"></i></div>
-        <h4 class ="footer_title">Pagá con tarjeta o en efectivo</h4> 
-        <p>Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en
-        puntos de pago. ¡Y siempre es seguro!</p>
+        <div class = "flex_component">
+            <div class = "icon"><i class="fas fa-solid fa-gift fa-2xl"></i></div>
+            <h4 class ="footer_title">Envío gratis desde $ 2.500</h4> 
+            <p class = "texto">Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
+            productos. Es un beneficio de Mercado Puntos.</p>
+        </div>
 
-        <div><i class="fas fa-solid fa-gift fa-2xl"></i></div>
-        <h4 class ="footer_title">Envío gratis desde $ 2.500</h4> 
-        <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de
-        productos. Es un beneficio de Mercado Puntos.</p>
-
-        <div><i class="fas fa-solid fa-user-shield fa-2xl"></i></div>
-        <h4 class ="footer_title">Seguridad de principio a fin</h4> 
-        <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
-        porque estás siempre protegid@.</p>
+        <div class = "flex_component">
+            <div class = "icon"><i class="fas fa-solid fa-user-shield fa-2xl"></i></div>
+            <h4 class ="footer_title">Seguridad de principio a fin</h4> 
+            <p class = "texto">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer,
+            porque estás siempre protegid@.</p>
+        </div>
 
         <div id = "copyright">Copyright © 1999-2020 MercadoLiebre S.R.L.</div>
 
