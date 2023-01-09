@@ -38,6 +38,10 @@ h2 {
     text-align: center;
 }
 
+footer{
+    padding: 10px;
+}
+
 
 .footer_title{
     font-weight : 900;
@@ -221,11 +225,14 @@ main section article{
     padding: 10px;
 }
 
+.item{
+    padding: 0px;
+    margin: 10px;
+}
 
 .item:hover{
     box-shadow : 0px 0px 10px rgb(100, 100, 100);
 }
-
 
 .item:hover > .products > .product{
     display: block;
