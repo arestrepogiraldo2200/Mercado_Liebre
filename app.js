@@ -6,6 +6,8 @@ const path = require('path');
 const publicPath = path.resolve(__dirname, './public');
 app.use(express.static(publicPath)) 
 
+const port = process.env.PORT || 8000;
+
 
 app.get('/',(req,res) =>{
     res.sendFile(path.join(__dirname,'./views/home.html'));
@@ -31,7 +33,7 @@ app.post('/', (req,res) => {
     res.sendFile(path.join(__dirname,"./views/home.html"));
 });
 
-app.listen(8000, () => console.log("Servidor funcionando en puerto 8000"));
+app.listen(port, () => console.log(`Servidor funcionando en puerto ${port}`));
 
 
 
